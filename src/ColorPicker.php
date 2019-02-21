@@ -1,7 +1,6 @@
 <?php namespace Skam\FormItems;
 
 use SleepingOwl\Admin\Form\Element\NamedFormElement;
-use SleepingOwl\Admin\AssetManager\AssetManager;
 
 class ColorPicker extends NamedFormElement
 {
@@ -15,18 +14,24 @@ class ColorPicker extends NamedFormElement
         ]);
     }
 
-    protected $view = 'laravel-form-items::resources.views.hex';
+    protected $view = 'laravel-form-items::hex';
 
     public function initialize()
     {
         parent::initialize();
 
-        $this->loadViewsFrom(__DIR__ .'/views', 'laravel-form-items');
-
         \Meta::addJs('admin-extend', asset('/packages/mypackage/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js'), 'admin-default', true);
         \Meta::addJs('admin-extend', asset('/packages/mypackage/vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css'), 'admin-default', true);
     }
 
-
-    // FormItem::colorPicker('hex', 'Hexadecimal colour')->required()
+    /**
+     * @return \Illuminate\View\View|\Illuminate\Contracts\View\Factory
+     */
+    public function render()
+    {
+        return app('sleeping_owl.template')->view(
+            $this->getView(),
+            $this->toArray()
+        );
+    }
 }

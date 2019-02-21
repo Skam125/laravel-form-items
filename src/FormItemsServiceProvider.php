@@ -2,7 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class ManagerServiceProvider extends ServiceProvider {
+class FormItemsServiceProvider extends ServiceProvider {
     /**
      * Indicates if loading of the provider is deferred.
      *
