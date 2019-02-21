@@ -1,0 +1,34 @@
+{
+  "name": "skam/laravel-form-items",
+  "description": "Form items for SleepingOwlAdmin",
+  "keywords": [
+    "laravel",
+    "SleepingOwlAdmin",
+    "admin",
+    "administrator",
+    "crud",
+    "panel"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Maks Matashin",
+      "email": "max.matashin@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7",
+    "laravelrus/sleepingowl": "dev-development"
+  },
+  "autoload": {
+    "psr-4": {
+      "Skam\\FormItems\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.0"
+    }
+  },
+  "minimum-stability": "stable"
+}
