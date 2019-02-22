@@ -26,9 +26,9 @@ class ColorPicker extends NamedFormElement
 //        https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/img/bootstrap-colorpicker/hue.png
 //        https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/img/bootstrap-colorpicker/saturation.png
 //        https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/js/bootstrap-colorpicker.min.js
-        \Meta::addCss('colorpicker', asset('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/css/bootstrap-colorpicker.min.css'));
-        \Meta::addJs('colorpicker', asset('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/js/bootstrap-colorpicker.min.js'), ['admin-default'], true);
-//        \Meta::addJs('admin-extend', asset('/packages/mypackage/vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css'), 'admin-default', true);
+        \Meta::addCss('colorpicker-css', public_path('/vendor/laravel-form-items/css/bootstrap-colorpicker.min.css'));
+        \Meta::addJs('colorpicker-js', public_path('/vendor/laravel-form-items/js/bootstrap-colorpicker.min.js'), ['admin-default'], true);
+        \Meta::addJs('colorpicker', public_path('/vendor/laravel-form-items/js/bootstrap-colorpicker.min.js'), ['colorpicker-js'], true);
     }
 
     /**
