@@ -28,7 +28,7 @@ class ColorPicker extends NamedFormElement
 //        https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/js/bootstrap-colorpicker.min.js
         \Meta::addCss('colorpicker-css', public_path('/vendor/laravel-form-items/css/bootstrap-colorpicker.min.css'));
         \Meta::addJs('colorpicker-js', public_path('/vendor/laravel-form-items/js/bootstrap-colorpicker.min.js'), ['admin-default'], true);
-        \Meta::addJs('colorpicker', public_path('/vendor/laravel-form-items/js/bootstrap-colorpicker.min.js'), ['colorpicker-js'], true);
+        \Meta::addJs('fields-handler', public_path('/vendor/laravel-form-items/js/bootstrap-colorpicker.min.js'), ['colorpicker-js'], true);
     }
 
     /**
