@@ -34,7 +34,7 @@ class FormItemsServiceProvider extends ServiceProvider {
         ], 'fieldsViews');
 
         $this->publishes([
-            __DIR__.'../public' => public_path('vendor/laravel-form-items'),
+            __DIR__.'/../public' => public_path('vendor/laravel-form-items'),
         ], 'colorPicker');
     }
 }
