@@ -1,4 +1,4 @@
-<div class="form-group form-element-text {{ $errors->has($name) ? 'has-error' : '' }} colorpicker-{{ $name }}">
+<div class="form-group {{ $errors->has($name) ? 'has-error' : '' }}">
     <label for="{{ $name }}" class="control-label">
         {{ $label }}
 
@@ -6,10 +6,14 @@
             <span class="form-element-required">*</span>
         @endif
     </label>
-    <input {!! $attributes !!} value="{{$value}}"
-           @if($readonly) readonly @endif
-    >
-
+    <div class="input-group colorpicker-component ">
+        <input {!! $attributes !!} value="{{$value}}"
+               @if($readonly) readonly @endif
+        >
+        <span class="input-group-addon"><i></i></span>
+    </div>
     @include(AdminTemplate::getViewPath('form.element.partials.helptext'))
     @include(AdminTemplate::getViewPath('form.element.partials.errors'))
 </div>
+
+

@@ -1,6 +1,5 @@
 $(function(){
-	console.log('it works!!!');
-    $('.input-{{ $name }}').colorpicker({
-        'format' : 'hex'
+    $('.colorpicker-component').colorpicker({
+        'format' : 'hex'  // hex, rgb, rgba
     });
 });
